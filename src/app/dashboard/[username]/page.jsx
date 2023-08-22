@@ -1,3 +1,4 @@
+import Clock from '@/components/Clock'
 import DonutChart from '@/components/DonutChart'
 import TreeMapChart from '@/components/TreeMapChart'
 import Image from 'next/image'
@@ -94,6 +95,7 @@ export default async function DashboardPage ({ params }) {
     <>
       <h1>Dashboard page 🤔</h1>
       <p>Dashboard for {params.username}</p>
+      <Clock />
       <TreeMapChart series={data.series} />
       <DonutChart data={data.donutChartData} />
       <p>{data.name}</p>
