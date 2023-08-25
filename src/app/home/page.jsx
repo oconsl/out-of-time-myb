@@ -1,6 +1,6 @@
-import Timer from '@/components/Timer'
+import {Timer} from '@/components'
 
-export default function HomePage () {
+export  function HomePage () {
   return (
     <main className=''>
       <h1 className=''>Home Page</h1>
