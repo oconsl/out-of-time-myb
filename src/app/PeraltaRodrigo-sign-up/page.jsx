@@ -12,7 +12,7 @@ const INPUTS = [
 
 export const metadata = {title:"Register"}
 
-export default function SingUpPage() {   
+export default function SignUpPage() {   
   return (
     <main className="h-screen bg-[#242839] realtive text-center lg:text-left">
       <RegisterForm inputs={INPUTS} />
