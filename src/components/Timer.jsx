@@ -1,13 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { cn } from "@/utils/cn";
+import Image from "next/image";
+// import heroImage from "@/assets/futbol.png";
+// import heroImage1 from './futbol.png'
+
 
 const ONE_SECOND_IN_MS = 1000;
 
 export default function Timer({ title, category, className }) {
   const [timer, setTimer] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
+
+  // const heroImage1= `/${title}.png`
+  // console.log(heroImage1);
+  
+
+  // console.log(title);
 
   useEffect(() => {
     let timerInterval;
@@ -37,9 +47,11 @@ export default function Timer({ title, category, className }) {
       <span className={cn("bg-red-500 rounded-md p-2", className)}>
         {category}
       </span>
-      <img
-        className="w-10 h-10"
-        src="https://images.vexels.com/media/users/3/140908/isolated/lists/bdc30bbe3c022a11e2d7fd0e642c61ae-icono-de-libro-abierto.png"
+      <Image
+        className="mt-5 mb-5"
+        src={`/images/${title}.png`}
+        width={600}
+        height={600}
         alt="svg icon"
       />
     </button>
