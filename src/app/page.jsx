@@ -22,7 +22,9 @@ export default function Home () {
     <main className="flex flex-col min-h-screen items-center justify-between">
       <h1 className=''>Out Of Time ⌛</h1>
       <picture>
-        <Image src={heroImage} alt="Hourglass Hero" />
+        <source media="(min-width: 250px) and (max-width: 799px)" srcSet="movil-picture-1.webp" />
+        <source media="(min-width: 800px)" srcSet="pc-picture.webp" />
+        <img srcSet="pc-picture.webp" alt="Hourglass hero" />     
       </picture>
       <section>
         <h2>¿Qué es Out Of Time?</h2>
