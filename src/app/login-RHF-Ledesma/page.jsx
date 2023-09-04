@@ -8,7 +8,10 @@ export default function LoginPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    //Aqui va la funcion que manda los datos al backend
+    console.log(data)
+  };
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
