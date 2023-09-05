@@ -1,20 +1,35 @@
 import Link from "next/link";
-import Image from 'next/image'
-import logo from '@/assets/logo-op1.png'
+import Image from "next/image";
+import logo from "@/assets/logo-op1.png";
+import watchImage from "@/assets/reloj-op1.png";
+import bgImage from "@/assets/bgRegister.png";
 
 export default function LoginPage() {
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">         
-           <picture>            
-            <Image src={logo} alt="Out of Time - Logo" height={'40'} />
-           </picture>
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <picture className="flex justify-center">
+            <Image src={logo} alt="Out of Time - Logo" height={"40"} />
+          </picture>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
         </div>
-
+        <section className="hidden lg:block">
+          <Image
+            src={watchImage}
+            alt="Out of time"
+            className="w-full h-screen object-cover"
+          />
+        </section>
+        <section className="block lg:hidden mr-0">
+          <Image
+            src={bgImage}
+            alt="Out of time"
+            className="w-full h-screen object-cover "
+          />
+        </section>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -73,7 +88,7 @@ export default function LoginPage() {
             Not a member?{" "}
             <Link
               href="/sign-up"
-              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+              className="font-semibold underline leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Sign-Up
             </Link>
@@ -82,8 +97,8 @@ export default function LoginPage() {
       </div>
       <div>
         <section className="flex w-full justify-center">
-          <video width="640" height="360" controls>
-            <source src="/src/assets/VideoEjemplo.mp4" type="video/mp4" />
+          <video width="320" height="180" controls autoPlay>
+            <source src="/VideoEjemplo.mp4" type="video/mp4" autoPlay />
             Tu navegador no admite el elemento de video.
           </video>
         </section>
