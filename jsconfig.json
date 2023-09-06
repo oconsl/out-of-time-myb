@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/correa":["./src/app/correa-format-HH-MM-SS-timer/timer-components.jsx"]
     }
   }
 }
