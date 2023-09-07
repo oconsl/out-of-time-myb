@@ -3,6 +3,12 @@ import Link from 'next/link'
 import heroImage from '@/assets/reloj-op1.png'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import ReviewCard from '@/components/ReviewCard'
+import { Yanone_Kaffeesatz  } from "next/font/google"
+
+
+const yanoneKaffeesatz = Yanone_Kaffeesatz({
+  subsets: ['latin-ext']
+})
 
 const REWVIEW_INFO = [
   {
@@ -19,7 +25,7 @@ const REWVIEW_INFO = [
 
 export default function Home () {
   return (
-    <main className="flex flex-col min-h-screen items-center justify-between">
+    <main className={`flex flex-col min-h-screen items-center justify-between ${yanoneKaffeesatz.className}`}>
       <h1 className=''>Out Of Time ⌛</h1>
       <picture>
         <Image src={heroImage} alt="Hourglass Hero" />
