@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import heroImage from '@/assets/reloj-op1.png'
+import titleImage from '@/assets/Title-gear.webp'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import ReviewCard from '@/components/ReviewCard'
+import Clock from '@/components/Clock'
 
 const REWVIEW_INFO = [
   {
@@ -21,7 +23,9 @@ export default function Home () {
   return (
     <main className="flex flex-col min-h-screen items-center justify-between">
       <h1 className=''>Out Of Time ⌛</h1>
+      <Clock />
       <picture>
+        <Image src={titleImage} alt="Title" />
         <Image src={heroImage} alt="Hourglass Hero" />
       </picture>
       <section>
