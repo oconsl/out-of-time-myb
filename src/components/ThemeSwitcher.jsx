@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-export default function ThemeSwitcher () {
+export default function ThemeSwitcher() {
   const [theme, setTheme] = useState('light')
 
   const handleThemeSwitch = () => {
@@ -10,11 +10,10 @@ export default function ThemeSwitcher () {
   }
 
   return (
-    <div>
-      {
-        theme === 'light'
-          ? <button onClick={handleThemeSwitch}>🌙</button>
-          : <button onClick={handleThemeSwitch}>☀️</button>
+    <div className="fixed top-4 right-4">
+      {theme === 'light'
+        ? <button onClick={handleThemeSwitch} className="bg-gray-800 p-1 rounded-full focus:outline-none">🌙</button>
+        : <button onClick={handleThemeSwitch} className="bg-gray-200 p-1 rounded-full focus:outline-none">☀️</button>
       }
     </div>
   )
